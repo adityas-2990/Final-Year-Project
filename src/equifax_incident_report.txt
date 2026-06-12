@@ -1,0 +1,13 @@
+Incident Report: The 2017 Equifax Data Breach
+
+Overview
+In September 2017, Equifax, one of the three largest consumer credit reporting agencies in the United States, announced a massive cybersecurity breach. The data exposure impacted approximately 147 million consumers, compromising highly sensitive personal information including Social Security numbers, birth dates, home addresses, and, in some cases, driver's license numbers and credit card details. The event is considered one of the most severe data breaches in history due to the critical nature of the stolen financial data.
+
+Root Technical Cause
+The breach originated from a known vulnerability in Apache Struts, a popular open-source web application framework used heavily by Equifax's Automated Consumer Interview System (ACIS). The vulnerability, identified as CVE-2017-5638, was publicly disclosed by the Apache Software Foundation in March 2017. Despite the Department of Homeland Security notifying Equifax of the critical patch requirement, internal communication breakdowns resulted in the ACIS servers remaining unpatched. Hackers exploited this vulnerability in mid-May 2017 to gain initial access to the Equifax network.
+
+Failure of Detection Mechanisms
+Once inside the network, the attackers maneuvered laterally for 76 days, locating sensitive databases and exfiltrating data in small, encrypted increments. Equifax’s network possessed an Intrusion Detection System (IDS) designed to inspect network traffic for malicious activity. However, the IDS failed to detect the massive data exfiltration because the security certificate required to decrypt and inspect the outbound network traffic had expired 19 months earlier, in 2015.
+
+Discovery and Aftermath
+Equifax administrators finally updated the expired security certificate on July 29, 2017. Almost immediately, the IDS flagged the suspicious encrypted traffic, and the company severed the connection. Equifax hired the cybersecurity firm Mandiant to conduct a forensic investigation. The public reaction to the breach was overwhelmingly negative, characterized by severe outrage over the delayed public disclosure and the company's poorly managed response website. The fallout was catastrophic for Equifax’s leadership; CEO Richard Smith resigned shortly after. In 2019, Equifax agreed to a global settlement of up to $700 million with the Federal Trade Commission (FTC) to cover consumer compensation and state investigations.

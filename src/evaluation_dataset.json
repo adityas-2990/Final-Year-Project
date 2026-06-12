@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Summarization",
+    "question": "Summarize the primary technical failures that allowed the breach to happen and persist.",
+    "ground_truth_answer": "Equifax failed to patch a known vulnerability in the Apache Struts framework (CVE-2017-5638). Furthermore, their intrusion detection system failed to spot the hackers for 76 days because an essential network decryption certificate had expired 19 months prior.",
+    "expected_keywords": ["Apache", "Struts", "patch", "certificate", "expired", "IDS", "detection", "CVE-2017-5638"]
+  },
+  {
+    "category": "Classification",
+    "question": "Classify the following quote from the text: 'Equifax agreed to a global settlement of up to $700 million with the FTC.' Choose from: [Technical Flaw, Financial Impact, Public Reaction].",
+    "ground_truth_answer": "Financial Impact",
+    "expected_keywords": ["Financial", "Impact"]
+  },
+  {
+    "category": "Sentiment Analysis",
+    "question": "What was the prevailing sentiment and public reaction following Equifax's disclosure of the breach?",
+    "ground_truth_answer": "The public reaction was overwhelmingly negative, marked by severe outrage directed at the delayed disclosure and the mishandling of the post-breach response.",
+    "expected_keywords": ["Negative", "outrage", "severe"]
+  },
+  {
+    "category": "Question Answering (Open)",
+    "question": "Why was Equifax's Intrusion Detection System (IDS) unable to see the hackers stealing the data?",
+    "ground_truth_answer": "The IDS could not inspect the outbound traffic because the security certificate required to decrypt that specific network traffic had expired in 2015, leaving the malicious traffic encrypted and invisible.",
+    "expected_keywords": ["Certificate", "expired", "decrypt", "encrypted", "inspect", "traffic"]
+  },
+  {
+    "category": "Question Answering (Closed)",
+    "question": "What was the exact CVE identifier for the vulnerability exploited by the hackers?",
+    "ground_truth_answer": "CVE-2017-5638",
+    "expected_keywords": ["CVE-2017-5638"]
+  },
+  {
+    "category": "Entity Extraction",
+    "question": "Extract the names of the two external organizations (excluding Equifax) involved in notifying or investigating the breach.",
+    "ground_truth_answer": "Department of Homeland Security, Mandiant",
+    "expected_keywords": ["Department", "Homeland", "Security", "Mandiant"]
+  }
+]

@@ -1,0 +1,29 @@
+# ── Web UI ────────────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── LLM / Embeddings ──────────────────────────────────────────────────────────
+ollama>=0.2.0
+
+# ── Vector Store (RAG) ────────────────────────────────────────────────────────
+chromadb>=0.5.0
+
+# ── Document Parsers (RAG) ────────────────────────────────────────────────────
+pymupdf>=1.24.0           # fitz — PDF parsing
+python-docx>=1.1.0        # .docx parsing
+beautifulsoup4>=4.12.0    # HTML parsing
+
+# ── Data & ML ─────────────────────────────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.26.0
+scikit-learn>=1.4.0       # KMeans, KNNImputer, LabelEncoder
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+plotly>=5.20.0
+kaleido>=0.2.1            # Plotly → PNG export (graph_analysis.py)
+
+# ── Neural Evaluation Metric (optional) ───────────────────────────────────────
+# Uncomment if you want BERTScore support in evaluation.py
+# bert-score>=0.3.13
+
+# ── Environment / Secrets ─────────────────────────────────────────────────────
+python-dotenv>=1.0.0      # Loads OLLAMA_API_KEY from .env
